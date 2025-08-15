@@ -8,33 +8,62 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    /* True North Coworking Brand Colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 220 100% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 100% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 100% 8%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Deep Navy Primary */
+    --primary: 220 100% 8%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Light Navy Secondary */
+    --secondary: 220 20% 95%;
+    --secondary-foreground: 220 100% 8%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Gold Accent */
+    --accent: 43 100% 52%;
+    --accent-foreground: 220 100% 8%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Muted Tones */
+    --muted: 220 10% 96%;
+    --muted-foreground: 220 15% 45%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 15% 90%;
+    --input: 220 15% 95%;
+    --ring: 43 100% 52%;
+
+    /* Custom Design Tokens */
+    --navy-50: 220 60% 97%;
+    --navy-100: 220 40% 94%;
+    --navy-900: 220 100% 8%;
+    --navy-800: 220 85% 12%;
+    
+    --gold-400: 43 90% 60%;
+    --gold-500: 43 100% 52%;
+    --gold-600: 43 95% 45%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(220 100% 8% / 0.95), hsl(220 85% 12% / 0.9));
+    --gradient-gold: linear-gradient(135deg, hsl(43 100% 52%), hsl(43 95% 45%));
+    --gradient-navy: linear-gradient(135deg, hsl(220 100% 8%), hsl(220 85% 12%));
+
+    /* Shadows */
+    --shadow-elegant: 0 20px 40px -12px hsl(220 100% 8% / 0.15);
+    --shadow-gold: 0 10px 30px -10px hsl(43 100% 52% / 0.25);
+    --shadow-card: 0 4px 20px -4px hsl(220 100% 8% / 0.1);
+
+    /* Animation */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 
     --radius: 0.5rem;
 
@@ -56,33 +85,33 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 220 100% 8%;
+    --foreground: 0 0% 100%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 85% 12%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 85% 12%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 43 100% 52%;
+    --primary-foreground: 220 100% 8%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 220 50% 20%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 40% 15%;
+    --muted-foreground: 220 20% 70%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 43 100% 52%;
+    --accent-foreground: 220 100% 8%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 220 40% 25%;
+    --input: 220 40% 20%;
+    --ring: 43 100% 52%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +129,123 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Hero Section */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .gradient-navy {
+    background: var(--gradient-navy);
+  }
+
+  /* Button Variants */
+  .btn-gold {
+    @apply bg-accent text-accent-foreground hover:shadow-lg;
+    box-shadow: var(--shadow-gold);
+    transition: var(--transition-smooth);
+  }
+
+  .btn-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-gold), 0 4px 20px -4px hsl(43 100% 52% / 0.4);
+  }
+
+  .btn-outline-gold {
+    @apply border-2 border-accent text-accent bg-transparent hover:bg-accent hover:text-accent-foreground;
+    transition: var(--transition-smooth);
+  }
+
+  .btn-navy {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90;
+    box-shadow: var(--shadow-elegant);
+    transition: var(--transition-smooth);
+  }
+
+  /* Card Styles */
+  .card-elegant {
+    @apply bg-card border border-border/50 backdrop-blur-sm;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-spring);
+  }
+
+  .card-elegant:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-elegant);
+  }
+
+  /* Workspace Card */
+  .workspace-card {
+    @apply bg-card rounded-2xl p-6 border border-border/30;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-spring);
+  }
+
+  .workspace-card:hover {
+    transform: scale(1.02) translateY(-4px);
+    box-shadow: var(--shadow-elegant);
+  }
+
+  /* Section Styling */
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Typography */
+  .heading-xl {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
+  }
+
+  .heading-lg {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight;
+  }
+
+  .heading-md {
+    @apply text-2xl md:text-3xl font-bold tracking-tight;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Animations */
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-stagger {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Mobile Sticky CTA */
+  .mobile-cta {
+    @apply fixed bottom-4 left-4 right-4 z-50 md:hidden;
   }
 }
