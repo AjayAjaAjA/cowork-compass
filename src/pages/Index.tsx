@@ -1,3 +1,4 @@
+import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import WorkspaceOptions from '@/components/WorkspaceOptions';
@@ -10,13 +11,22 @@ import MobileCTA from '@/components/MobileCTA';
 const Index = () => {
   return (
     <>
+      <Header />
       <main className="relative">
         <Hero />
-        <WhyChooseUs />
-        <WorkspaceOptions />
+        <div id="about">
+          <WhyChooseUs />
+        </div>
+        <div id="workspaces">
+          <WorkspaceOptions />
+        </div>
         <Amenities />
-        <Pricing />
-        <Contact />
+        <div id="pricing">
+          <Pricing />
+        </div>
+        <div id="contact">
+          <Contact />
+        </div>
       </main>
       <Footer />
       <MobileCTA />
