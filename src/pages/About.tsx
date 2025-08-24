@@ -37,26 +37,26 @@ const About = () => {
     }
   ];
 
-  const team = [
-    {
-      name: 'Sarah Chen',
-      role: 'Founder & CEO',
-      bio: 'Former tech executive turned workspace innovator. Sarah founded True North after experiencing the challenges of remote work firsthand.',
-      image: '/api/placeholder/300/300'
-    },
-    {
-      name: 'Marcus Rodriguez',
-      role: 'Head of Community',
-      bio: 'Community builder with 10+ years in hospitality. Marcus ensures every member feels welcomed and connected.',
-      image: '/api/placeholder/300/300'
-    },
-    {
-      name: 'Emily Watson',
-      role: 'Operations Director',
-      bio: 'Operations expert focused on creating seamless experiences. Emily oversees daily operations and member services.',
-      image: '/api/placeholder/300/300'
-    }
-  ];
+  // const team = [
+  //   {
+  //     name: 'Sarah Chen',
+  //     role: 'Founder & CEO',
+  //     bio: 'Former tech executive turned workspace innovator. Sarah founded True North after experiencing the challenges of remote work firsthand.',
+  //     image: '/api/placeholder/300/300'
+  //   },
+  //   {
+  //     name: 'Marcus Rodriguez',
+  //     role: 'Head of Community',
+  //     bio: 'Community builder with 10+ years in hospitality. Marcus ensures every member feels welcomed and connected.',
+  //     image: '/api/placeholder/300/300'
+  //   },
+  //   {
+  //     name: 'Emily Watson',
+  //     role: 'Operations Director',
+  //     bio: 'Operations expert focused on creating seamless experiences. Emily oversees daily operations and member services.',
+  //     image: '/api/placeholder/300/300'
+  //   }
+  // ];
 
   return (
     <>
@@ -120,12 +120,8 @@ const About = () => {
                 viewport={{ once: true }}
                 className="relative"
               >
-                <div className="aspect-square bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl p-8 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-6xl font-bold text-primary mb-4">500+</div>
-                    <div className="text-xl text-muted-foreground">Happy Members</div>
-                  </div>
-                </div>
+                {/* Single poster image with play button */}
+                <VideoPlayerPlaceholder />
               </motion.div>
             </div>
           </div>
@@ -169,8 +165,8 @@ const About = () => {
           </div>
         </section>
 
-        {/* Team Section */}
-        <section className="py-24 bg-background">
+        Team Section
+        {/* <section className="py-24 bg-background">
           <div className="container-wide">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -209,7 +205,7 @@ const About = () => {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
       <Footer />
     </>
@@ -217,3 +213,22 @@ const About = () => {
 };
 
 export default About;
+
+// Simple cropped autoplaying preview (plays once on visit)
+const VideoPlayerPlaceholder = () => {
+  return (
+    <div className="w-full relative rounded-3xl overflow-hidden shadow-lg">
+      {/* Cropped preview: fixed height with object-cover to crop; poster fallback if autoplay is blocked */}
+      <video
+        src="/src/assets/about-us.mp4"
+        poster="/src/assets/hero-bg.jpg"
+        muted
+        playsInline
+        autoPlay
+        preload="auto"
+        aria-label="About True North preview video"
+        className="w-full h-64 md:h-80 lg:h-96 object-cover object-center block rounded-xl"
+      />
+    </div>
+  );
+};

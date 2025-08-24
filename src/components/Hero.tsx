@@ -1,20 +1,43 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import heroImage from '@/assets/hero-bg.jpg';
+import { useRef, useEffect } from 'react';
 
 const Hero = () => {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    // Attempt to play the video once on mount (muted autoplay should work in most browsers)
+    const v = videoRef.current;
+    if (v) {
+      // try/catch because some browsers may block play even if muted
+      v.play().catch(() => {
+        /* ignore play errors */
+      });
+    }
+  }, []);
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url(${heroImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      />
+    // Cropped hero: use a shorter fixed viewport height so the video is cropped
+    <section className="relative h-[70vh] lg:h-[85vh] flex items-center justify-center overflow-hidden">
+      {/* Background Video */}
+      <div className="absolute inset-0 z-0">
+        <video
+          ref={videoRef}
+          src="/src/assets/home-hero.mp4"
+          poster="/src/assets/hero-bg.jpg"
+          muted
+          playsInline
+          autoPlay
+          preload="metadata"
+          // no loop so it plays only once
+          onEnded={(e) => {
+            const t = e.currentTarget as HTMLVideoElement;
+            t.pause();
+            // keep last frame visible; do not reset currentTime so it remains at end
+          }}
+          className="w-full h-full object-cover"
+        />
+      </div>
       
       {/* Overlay */}
       <div className="absolute inset-0 hero-gradient z-10" />
