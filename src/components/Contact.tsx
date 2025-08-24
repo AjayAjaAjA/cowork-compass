@@ -83,9 +83,9 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="heading-lg text-primary mb-4">Get in Touch</h2>
+          <h2 className="heading-lg text-primary mb-4">Contact Us</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ready to join our community? Contact us today or schedule a tour to see our spaces firsthand.
+            Have questions or want to schedule a tour? Reach out and our team will respond within 24 hours.
           </p>
         </motion.div>
 
@@ -226,17 +226,14 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Embedded Map Placeholder */}
-            <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <svg className="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <p className="text-muted-foreground">Interactive Map</p>
-                <p className="text-sm text-muted-foreground/70">Tirunelveli, Tamil Nadu, India</p>
-              </div>
+            {/* Embedded Google Map centered on Tirunelveli */}
+            <div className="aspect-video rounded-lg overflow-hidden shadow-md">
+              <iframe
+                title="True North Coworking - Tirunelveli"
+                src="https://maps.google.com/maps?q=8.725,77.695&z=15&output=embed"
+                className="w-full h-full border-0"
+                loading="lazy"
+              />
             </div>
           </motion.div>
         </div>

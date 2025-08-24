@@ -1,7 +1,7 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import WhyChooseUs from '@/components/WhyChooseUs';
-import WorkspaceOptions from '@/components/WorkspaceOptions';
+// import WorkspaceOptions from '@/components/WorkspaceOptions';
 import Amenities from '@/components/Amenities';
 import Gallery from '@/components/Gallery';
 import VideoSection from '@/components/VideoSection';
@@ -18,9 +18,6 @@ const Index = () => {
         <Hero />
         <div id="about">
           <WhyChooseUs />
-        </div>
-        <div id="workspaces">
-          <WorkspaceOptions />
         </div>
         <Amenities />
         <div id="gallery">

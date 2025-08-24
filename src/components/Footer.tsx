@@ -6,7 +6,7 @@ const Footer = () => {
 
   const quickLinks = [
     { label: 'About Us', href: '#about' },
-    { label: 'Workspace Options', href: '#workspaces' },
+  // Removed workspace options per request
     { label: 'Pricing', href: '#pricing' },
     { label: 'Amenities', href: '#amenities' },
     { label: 'Contact', href: '#contact' }
@@ -136,6 +136,11 @@ const Footer = () => {
           <p className="text-sm text-primary-foreground/60">
             © {currentYear} True North Coworking. All rights reserved.
           </p>
+           <div className="flex gap-6 text-sm">
+            <a href="#privacy" className="text-primary-foreground/60 hover:text-blue-400 transition-colors">
+              Devopled by HIG AI Automaiton 
+            </a>
+            </div>
           <div className="flex gap-6 text-sm">
             <a href="#privacy" className="text-primary-foreground/60 hover:text-accent transition-colors">
               Privacy Policy

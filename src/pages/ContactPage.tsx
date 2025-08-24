@@ -76,7 +76,7 @@ const ContactPage = () => {
     {
       icon: MapPin,
       title: 'Address',
-      details: ['123 Business District', 'Downtown NY, 10001']
+  details: ['Coworking Space, Tirunelveli', 'Tirunelveli, Tamil Nadu 627001']
     },
     {
       icon: Phone,
@@ -109,11 +109,10 @@ const ContactPage = () => {
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-                Get in Touch
+                Contact Us
               </h1>
               <p className="text-xl text-primary-foreground/90 leading-relaxed">
-                Ready to find your true north? Contact us to learn more about our workspace 
-                solutions and schedule a tour of our facilities.
+                Ready to find your true north? Contact our team to learn more or schedule a visit.
               </p>
             </motion.div>
           </div>
@@ -254,15 +253,16 @@ const ContactPage = () => {
                   </div>
                 ))}
 
-                {/* Map Placeholder */}
+                {/* Embedded Google Map centered on Tirunelveli, Tamil Nadu */}
                 <div className="mt-12">
                   <h3 className="text-lg font-semibold mb-4">Location</h3>
-                  <div className="aspect-video bg-muted rounded-2xl flex items-center justify-center">
-                    <div className="text-center text-muted-foreground">
-                      <MapPin className="w-12 h-12 mx-auto mb-4" />
-                      <p>Interactive Map</p>
-                      <p className="text-sm">123 Business District, Downtown NY</p>
-                    </div>
+                  <div className="aspect-video rounded-2xl overflow-hidden shadow-md">
+                    <iframe
+                      title="True North Coworking - Tirunelveli"
+                      src="https://maps.google.com/maps?q=8.725,77.695&z=15&output=embed"
+                      className="w-full h-full border-0"
+                      loading="lazy"
+                    />
                   </div>
                 </div>
               </motion.div>
