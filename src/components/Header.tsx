@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import logoImg from '@/assets/True-North-Logo.jpeg';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
@@ -87,7 +88,7 @@ const Header = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
               <img
-                src="/src/assets/True-North-Logo.jpeg"
+                src={logoImg}
                 alt="True North Logo"
                 className="w-10 h-full object-cover rounded-lg"
               />

@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { useRef, useEffect } from 'react';
+import heroVideo from '@/assets/home-hero.mp4';
+import heroPoster from '@/assets/hero-bg.jpg';
 
 const Hero = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -23,8 +25,8 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <video
           ref={videoRef}
-          src="/src/assets/home-hero.mp4"
-          poster="/src/assets/hero-bg.jpg"
+          src={heroVideo}
+          poster={heroPoster}
           muted
           playsInline
           autoPlay
