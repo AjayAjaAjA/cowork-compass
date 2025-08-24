@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* True North Coworking Brand Colors - Black & White Elite */
+    /* True North Coworking Brand Colors - Black & Red Elite */
     --background: 0 0% 100%;
     --foreground: 0 0% 0%;
 
@@ -26,8 +26,8 @@ All colors MUST be HSL.
     --secondary: 0 0% 96%;
     --secondary-foreground: 0 0% 0%;
 
-    /* Dark Gray Accent */
-    --accent: 0 0% 20%;
+    /* Bold Red Accent */
+    --accent: 0 85% 45%;
     --accent-foreground: 0 0% 100%;
 
     /* Muted Tones */
@@ -51,13 +51,13 @@ All colors MUST be HSL.
     --black: 0 0% 0%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 0% / 0.95), hsl(0 0% 20% / 0.9));
-    --gradient-accent: linear-gradient(135deg, hsl(0 0% 20%), hsl(0 0% 0%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 0% / 0.95), hsl(0 85% 25% / 0.8));
+    --gradient-accent: linear-gradient(135deg, hsl(0 85% 45%), hsl(0 85% 35%));
     --gradient-subtle: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 96%));
 
     /* Shadows */
     --shadow-elegant: 0 20px 40px -12px hsl(0 0% 0% / 0.15);
-    --shadow-accent: 0 10px 30px -10px hsl(0 0% 0% / 0.25);
+    --shadow-accent: 0 10px 30px -10px hsl(0 85% 45% / 0.3);
     --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.1);
 
     /* Animation */
@@ -102,8 +102,8 @@ All colors MUST be HSL.
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 70%;
 
-    --accent: 0 0% 80%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 0 85% 60%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
