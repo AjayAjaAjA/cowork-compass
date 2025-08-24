@@ -11,9 +11,9 @@ const plans = [
     description: 'Perfect for occasional use',
     popular: false,
     pricing: {
-      daily: '$25',
-      weekly: '$120',
-      monthly: '$399'
+      daily: '₹500',
+      weekly: '₹2,400',
+      monthly: '₹8,000'
     },
     features: [
       'Hot desk access',
@@ -28,9 +28,9 @@ const plans = [
     description: 'Best for regular professionals',
     popular: true,
     pricing: {
-      daily: '$35',
-      weekly: '$180',
-      monthly: '$599'
+      daily: '₹700',
+      weekly: '₹3,600',
+      monthly: '₹12,000'
     },
     features: [
       'Dedicated desk',
@@ -47,9 +47,9 @@ const plans = [
     description: 'Ideal for growing teams',
     popular: false,
     pricing: {
-      daily: '$50',
-      weekly: '$280',
-      monthly: '$999'
+      daily: '₹1,000',
+      weekly: '₹5,600',
+      monthly: '₹20,000'
     },
     features: [
       'Private office',

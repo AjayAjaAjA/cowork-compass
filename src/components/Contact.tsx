@@ -202,24 +202,26 @@ const Contact = () => {
               <div>
                 <h4 className="font-semibold text-primary mb-1">Address</h4>
                 <p className="text-muted-foreground">
-                  123 Business District<br />
-                  Downtown, NY 10001
+                  Coworking Space<br />
+                  Tirunelveli, Tamil Nadu 627001<br />
+                  India
                 </p>
               </div>
               
               <div>
                 <h4 className="font-semibold text-primary mb-1">Hours</h4>
                 <p className="text-muted-foreground">
-                  Monday - Friday: 7:00 AM - 10:00 PM<br />
-                  Weekend: 8:00 AM - 8:00 PM
+                  Monday - Friday: 9:00 AM - 9:00 PM<br />
+                  Saturday: 9:00 AM - 6:00 PM<br />
+                  Sunday: Closed
                 </p>
               </div>
               
               <div>
                 <h4 className="font-semibold text-primary mb-1">Contact</h4>
                 <p className="text-muted-foreground">
-                  Phone: (555) 123-4567<br />
-                  Email: hello@truenorthcoworking.com
+                  Phone: +91 9876543210<br />
+                  Email: hello@tirunelvelicoworking.com
                 </p>
               </div>
             </div>
@@ -233,7 +235,7 @@ const Contact = () => {
                   </svg>
                 </div>
                 <p className="text-muted-foreground">Interactive Map</p>
-                <p className="text-sm text-muted-foreground/70">123 Business District, Downtown NY</p>
+                <p className="text-sm text-muted-foreground/70">Tirunelveli, Tamil Nadu, India</p>
               </div>
             </div>
           </motion.div>
