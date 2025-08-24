@@ -9,8 +9,7 @@ const Footer = () => {
     { label: 'Workspace Options', href: '#workspaces' },
     { label: 'Pricing', href: '#pricing' },
     { label: 'Amenities', href: '#amenities' },
-    { label: 'Contact', href: '#contact' },
-    { label: 'Book a Tour', href: '#tour' }
+    { label: 'Contact', href: '#contact' }
   ];
 
   const socialLinks = [

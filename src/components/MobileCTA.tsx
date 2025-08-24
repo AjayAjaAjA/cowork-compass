@@ -12,7 +12,7 @@ const MobileCTA = () => {
     >
       <Button className="btn-gold w-full shadow-lg" size="lg">
         <Phone className="w-5 h-5 mr-2" />
-        Book a Tour
+        Contact Us
       </Button>
     </motion.div>
   );

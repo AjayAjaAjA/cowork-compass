@@ -43,17 +43,11 @@ const Hero = () => {
           </motion.p>
           
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="flex justify-center items-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <Button 
-              size="lg" 
-              className="btn-gold px-8 py-6 text-lg font-semibold min-w-[180px]"
-            >
-              Book a Tour
-            </Button>
             <Button 
               size="lg" 
               variant="outline" 

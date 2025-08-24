@@ -12,7 +12,7 @@ const WhatsAppFloat = () => {
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ delay: 2, duration: 0.5 }}
-      className="fixed left-6 bottom-6 z-50"
+      className="fixed right-6 bottom-6 z-50"
     >
       <motion.a
         href={whatsappUrl}
@@ -28,9 +28,9 @@ const WhatsAppFloat = () => {
         <div className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-20"></div>
         
         {/* Tooltip */}
-        <div className="absolute left-full ml-3 px-3 py-2 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+        <div className="absolute right-full mr-3 px-3 py-2 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
           Chat with us on WhatsApp
-          <div className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-1 w-2 h-2 bg-gray-900 rotate-45"></div>
+          <div className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1 w-2 h-2 bg-gray-900 rotate-45"></div>
         </div>
       </motion.a>
     </motion.div>
