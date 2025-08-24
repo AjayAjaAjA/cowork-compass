@@ -37,15 +37,15 @@ const Header = () => {
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4 text-accent" />
-              <span>123 Business District, Downtown NY</span>
+              <span>Tirunelveli, Tamil Nadu, India</span>
             </div>
             <div className="flex items-center gap-2">
               <Phone className="w-4 h-4 text-accent" />
-              <span>(555) 123-4567</span>
+              <span>+91 9876543210</span>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4 text-accent" />
-              <span>hello@truenorthcoworking.com</span>
+              <span>hello@tirunelvelicoworking.com</span>
             </div>
           </div>
           <div className="flex items-center gap-3">

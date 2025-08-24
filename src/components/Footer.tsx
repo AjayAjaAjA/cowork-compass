@@ -35,20 +35,20 @@ const Footer = () => {
               <span className="text-accent">Coworking</span>
             </h3>
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
-              Your true north for productivity. Join our community of innovators, entrepreneurs, and professionals.
+              Your true north for productivity. Join our community of innovators, entrepreneurs, and professionals in Tirunelveli.
             </p>
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-accent" />
-                <span>123 Business District, Downtown NY</span>
+                <span>Coworking Space, Tirunelveli, Tamil Nadu 627001</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-accent" />
-                <span>(555) 123-4567</span>
+                <span>+91 9876543210</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-accent" />
-                <span>hello@truenorthcoworking.com</span>
+                <span>hello@tirunelvelicoworking.com</span>
               </div>
             </div>
           </motion.div>
@@ -119,8 +119,8 @@ const Footer = () => {
             </div>
 
             <div className="text-xs text-primary-foreground/60">
-              <p>Monday - Friday: 7:00 AM - 10:00 PM</p>
-              <p>Weekend: 8:00 AM - 8:00 PM</p>
+              <p>Monday - Friday: 9:00 AM - 9:00 PM</p>
+              <p>Saturday: 9:00 AM - 6:00 PM • Sunday: Closed</p>
             </div>
           </motion.div>
         </div>
